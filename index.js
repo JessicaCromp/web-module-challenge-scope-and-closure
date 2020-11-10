@@ -61,8 +61,8 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(scoreNum){
-return Math.floor(Math.random(scoreNum) * 3); /* Put in number that you want to max number*/
+function inning(){
+return Math.floor(Math.random() * 3); /* Put in number that you want to max number*/
 }
 inning();
 
@@ -80,13 +80,13 @@ For example: invoking finalScore(inning, 9) might return this object:
 */ 
 
 function finalScore(inningCB, toBePlayed) {
-  let totalGame = {Home: 0, Away: 0};
+  let totalGameScore = {Home: 0, Away: 0};
   for (let i = 1; i <= toBePlayed; i++) {
-  const currentScore = inningCB() /*doesn't have any arguements, just running it*/ 
+  const currentScore = inningCB; /*doesn't have any arguements, just running it*/ 
 
   totalGameScore.Home = totalGameScore.Home + currentScore();
   totalGameScore.Away = totalGameScore.Away + currentScore();  /*console.log?*/
-  console.log(`The final score is - Home ${currentScore.Home} - Away ${currentScore.Away}`) /********************* */
+  // console.log(`The final score is - Home ${currentScore.Home} - Away ${currentScore.Away}`) /********************* */
 }
 return totalGameScore;
 
@@ -151,13 +151,20 @@ Use the scoreboard function below to do the following:
   */
 
 
-function scoreboard(getInningScore, inningsCB, toBePlayed ) {
-  const totalGame = []
- for (let i = 0; i < aeachInning; index++) {
-   
- }
+// function scoreboard(getInningScore, inningsCB, toBePlayed ) {
+//   let homeScore = 0
+//   let awayScore = 0
+//   const scoreboardarr - []'
+//   for(let i -0; i < num ; i++){
+//     homeScore -getInningScore(inningsCB)
+//     awayScore -
+//   }
 
-}
+//  {
+   
+//  }
+
+// }
 
 
 
@@ -178,5 +185,5 @@ export default{
   inning,
   finalScore,
   getInningScore,
-  scoreboard,
+  // scoreboard,
 }
